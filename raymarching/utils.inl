@@ -19,6 +19,7 @@ namespace Utils {
 		return res;
 	}
 
+
 	template<size_t M>
 	double dot_product(const Vector<M>& a, const Vector<M>& b)
 	{
@@ -66,5 +67,19 @@ namespace Utils {
 			res[i] = v1[i] + v2[i];
 		}
 		return res;
+	}
+	// Linear interpolation
+	double mix(double a, double b, double k) {
+		return a * (1. - k) + b * k;
+	}
+
+
+	double smin(double a, double b, double k, double s = -1.) {
+		// when a is near b - more significant offset
+		// when a is far from b - very small offset
+		return 0.5 * (a + b + s * sqrt((a - b) * (a - b) + k));
+	}
+	double smax(double a, double b, double k) {
+		return smin(a, b, k, 1.);
 	}
 }

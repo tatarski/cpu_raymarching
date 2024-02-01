@@ -1,0 +1,26 @@
+NO SIMD:
+Time for iter 0 :1492ms
+Time for iter 1 :1479ms
+Time for iter 2 :1467ms
+Time for iter 3 :1492ms
+Time for iter 4 :1506ms
+Time for iter 5 :1486ms
+Time for iter 6 :1494ms
+Time for iter 7 :1484ms
+Time for iter 8 :1495ms
+Time for iter 9 :1513ms
+
+dot_product with normal addition/ multiplication:
+Time for iter 0 :343ms
+Time for iter 1 :363ms
+Time for iter 2 :513ms
+Time for iter 3 :395ms
+Time for iter 4 :407ms
+Time for iter 5 :358ms
+Time for iter 6 :358ms
+Time for iter 7 :356ms
+Time for iter 8 :352ms
+Time for iter 9 :358ms
+Average: 380.3ms
+
+dot_product with SIMD and shorts __mm_dp_ps

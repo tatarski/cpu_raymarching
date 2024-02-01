@@ -30,9 +30,11 @@ void writePPM(std::string name, const Image& img) {
 	if (!os.is_open()) {
 		std::cerr << errno << "Error opening file: " << errno << name << std::endl;
 	}
+
 	os << "P3\n";
 	os << img.w << " " << img.h << "\n";
 	os << "255\n";
+
 	for (size_t i = 0; i < img.h; i++) {
 		for (size_t j = 0; j < img.w; j++) {
 			for (size_t c = 0; c < img.c; c++) {
